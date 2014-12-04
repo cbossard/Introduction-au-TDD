@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TDD</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+    <section>
+		<h1>Introduction au TDD</h1>
+    </section>
+	<section class="stack">
+		<section >
+			<h2>TDD ?</h2>	
+		</section>
+		<section>
+			<h2>TDD = Test Driven Development</h2>
+			<p>Soit développement dirigé par les tests</p>
+		</section>
+	</section>
+	
+	<section>
+		<h2>Euh OK... <br/>Mais en quoi est-ce que ça consiste ?</h2>
+	</section>
+	
+	<section class="stack">	
+		<section>
+			<h2>Commençons par définir ce qu'est un test...</h2>
+		</section>
+		<section>
+			<h2>La pyramide des tests de Mike Cohn</h2>
+			<img src="img/pyramideTests.jpg" height="600"/>
+		</section>
+		<section>
+			<h2>Interessons-nous plus particulièrement aux tests unitaires</h2>
+			<p>Test unitaire = du code qui teste du code</p>
+			<p>La base de tous les tests</p>
+			<p>Investissement et volume le plus important</p>
+		</section>
+		<section>
+			<h2>Un test unitaire doit être :</h2>
+			<ul>
+				<li>Simple ("unitaire")</li>
+				<li>Lisible</li>
+				<li>Rapide à écrire</li>
+				<li>Rapide à exécuter</li>
+				<li>Indépendant</li>
+				<li>Répétable</li>
+				<li>Automatisable</li>
+			</ul>
+		</section>
+	</section>
+	
+	<section class="stack">
+		<section>
+			<h2>Retour sur le TDD</h2>
+		</section>
+		
+		<section>
+			<h2>Principe</h2>
+			<ol>
+				<li>Ecrire un premier test</li>
+				<li>Vérifier qu'il échoue (le code qu'il teste n'existe pas)</li>
+				<li>Ecrire juste le <b>code suffisant pour passer le test</b></li>
+				<li>Vérifier que le test passe</li>
+				<li>Refactoriser le code</li>
+				<li>Ecrire un deuxième test</li>
+				<li>...</li>
+			</ol>
+		</section>
+		
+		<section>
+			<h2>Quels avantages ?</h2>
+			<ul>
+				<li>Vérifier au plus tôt la bonne compréhension des besoins fonctionnels</li>
+				<li>Détecter au plus tôt les problèmes dans les specs</li>
+				<li>Ecriture de code testable</li>
+				<li>Améliorer la couverture du code par les tests</li>
+				<li>Les tests sont plus faciles à écrire <b>avant</b> le code métier qu'après</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>Oui mais...</h2>
+			<ul>
+				<li>Ce n'est pas facile...</li>
+				<li>L'apprentissage est long</li>
+				<li>Tout le monde doit s'y mettre</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>Oui mais...</h2>
+			<ul>
+				<li>ROI important</li>
+				<li>Meilleure confiance dans le code développé</li>
+				<li>Moins de crainte de modifier le code existant : les tests sont là pour servir de filet de sécurité</li>
+			</ul>
+		</section>
+	</section>
+		
+	<section>
+		<h2>On essaie ?</h2>
+		<p>Coding Dojo Kata</p>
+	</section>
+	
+	
+	<section>
+		<h2>Merci</h2>
+		<p>Merci à Xavier Nopre pour son inspiration et son aide (@xnopre)</p>
+	</section>
+</div>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
