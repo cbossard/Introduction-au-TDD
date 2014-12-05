@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.artis.dojo.TennisGameTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2014-12-05T08:48:43" hostname="FA-20" time="0.003">
+  <properties/>
+  <testcase name="joueur1_gagne_3_premiere_point" classname="com.artis.dojo.TennisGameTest" time="0.001"/>
+  <testcase name="nouveau_jeu_score_nul" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="joueur1_gagne_2_premiere_point" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="avantage_joueur1" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="joueur1_gagne_après_avantage" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="joueur1_gagne_premier_point" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="joueur1_gagne_jeu" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="egalite_15_partout" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <testcase name="egalite_apres_avantage" classname="com.artis.dojo.TennisGameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
